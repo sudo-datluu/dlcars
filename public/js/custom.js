@@ -7,6 +7,7 @@ document.getElementById('menu-icon').onclick = function() {
         sidenav.style.width = '250px';
         document.querySelector('main').style.marginLeft = '260px';
     }
+    sidenav.classList.toggle('p-4');
 }
 
 // Close the sidebar if the user clicks outside of it

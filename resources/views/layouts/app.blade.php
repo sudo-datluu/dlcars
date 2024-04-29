@@ -12,10 +12,13 @@
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
     <!-- MDB -->
     <link rel="stylesheet" href="{{asset('css/mdb.min.css')}}" />
-
+    <link rel="stylesheet" href="{{asset('css/car-logo.css')}}" />
     <link rel="stylesheet" href="{{asset('css/custom.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/dlcar-sidenav.css')}}" />
 </head>
 
 <body>
