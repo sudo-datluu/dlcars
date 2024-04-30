@@ -53,7 +53,7 @@
     position: absolute;
     background-color: #080D11;
     z-index: 9;
-    left: 0;
+    left: 4em;
     top: 0;
     height: 100vh;
     -webkit-transform: translateX(100%);
