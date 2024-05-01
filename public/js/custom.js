@@ -18,3 +18,10 @@ window.onclick = function(event) {
         document.querySelector('main').style.marginLeft = '0';
     }
 }
+
+
+$(document).ready(function() {
+    var sidebar = $('#mySidenav');
+    sidebar.style.width = '0';
+    $('main').style.marginLeft = '0';
+});
