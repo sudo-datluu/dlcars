@@ -10,7 +10,7 @@
                 @if(getCarType()->isNotEmpty())
                 @foreach(getCarType() as $type)
                 <li>
-                    <a href=" {{ route('home', [$brand->slug, $type->slug]) }} ">{{$type->name}}</a>
+                    <a href="{{ route('home', [$brand->slug, $type->slug]) }} ">{{$type->name}}</a>
                 </li>
                 @endforeach
                 @endif

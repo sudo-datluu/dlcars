@@ -1,0 +1,15 @@
+[
+    {
+        "type": "sedan",
+        "brand": "Toyota",
+        "car_model": "Camry 2013",
+        "image": "xxx",
+        "mileage": 10000,
+        "fuel_type": "petrol",
+        "seats": 5,
+        "quantity": 2,
+        "price_per_day": 120,
+        "description": "xxxxxxx",
+        "available": true
+    }
+]
