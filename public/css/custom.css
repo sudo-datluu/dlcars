@@ -1,9 +1,14 @@
-.text-primary {
+/* .text-primary {
     color: #E65922 !important;
 }
 
 .text-primary:hover {
     color: #FC583F !important;
+} */
+
+:root {
+    --mdb-primary: #E65922 !important;
+    --mdb-primary-rgb: 230, 89, 34;
 }
 
 #menu-icon {

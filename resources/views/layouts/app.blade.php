@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token-front" content="{{ csrf_token() }}">
     <title>DL Cars Rental</title>
+
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -13,10 +15,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.min.css">
 
-    <!-- MDB -->
+    <link rel="stylesheet" href="{{asset('css/search.css')}}" />
     <link rel="stylesheet" href="{{asset('css/mdb.min.css')}}" />
     <link rel="stylesheet" href="{{asset('css/car-logo.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/home.css')}}" />
     <link rel="stylesheet" href="{{asset('css/custom.css')}}" />
     <link rel="stylesheet" href="{{asset('css/dlcar-sidenav.css')}}" />
 </head>
@@ -39,17 +43,7 @@
                     </div>
                     <!-- Collapsible wrapper -->
 
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Projects</a>
-                        </li>
-                    </ul>
+                    @yield('nav-search')
                 </div>
                 <!-- Container wrapper -->
             </nav>
@@ -59,10 +53,17 @@
         </div>
     </main>
 </body>
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/autoComplete.min.js"></script>
 <script type="text/javascript" src="{{ asset('js/mdb.umd.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
-
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token-front"]').attr('content')
+        }
+    });
+</script>
 @yield('custom-script')
-
+@yield('search-script')
 </html>

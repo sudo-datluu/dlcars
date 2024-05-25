@@ -1,0 +1,98 @@
+.cover {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.app-name-link>img {
+    width: 150px !important;
+    padding-bottom: 0 !important;
+}
+
+.sidebar-toggle {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content {
+    padding-top: 0;
+}
+
+#logo {
+    width: 320px;
+    margin: 30px 0;
+}
+
+.link {
+    color: inherit;
+    border-bottom: 2px solid #42b983;
+    text-decoration: none;
+    font-weight: normal;
+    transition: color .3s;
+}
+
+.link:hover {
+    color: #42b983;
+}
+
+.no-underline {
+    border-bottom: 0;
+}
+
+.ps-icon-down {
+    margin-top: 50px;
+    border-bottom: 0;
+}
+
+.search input[type="search"] {
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg height='20px' width='20px' viewBox='0 0 24 24' fill='none' stroke='rgba(0, 0, 0, 0.3)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' preserveAspectRatio='xMidYMid meet' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10.5' cy='10.5' r='7.5' vector-effect='non-scaling-stroke'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='15.8' y2='15.8' vector-effect='non-scaling-stroke'%3E%3C/line%3E%3C/svg%3E");
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    text-align: center;
+    border-radius: 50rem;
+}
+
+.docsify-tabs__tab {
+    outline: none;
+    cursor: pointer;
+}
+
+.app-name-link>img {
+    width: 200px;
+    padding-bottom: 20px;
+}
+
+.title {
+    color: #aaaaaa;
+}
+
+summary {
+    outline: none;
+}
+
+.no_result {
+    margin: 0.3rem;
+    padding: 0.3rem 0.5rem;
+    list-style: none;
+    text-align: left;
+    font-size: 1rem;
+    color: #212121;
+    transition: all 0.1s ease-in-out;
+    border-radius: 0.35rem;
+    background-color: rgba(255, 255, 255, 1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.no_result>span {
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    color: rgba(0, 0, 0, .2);
+}
