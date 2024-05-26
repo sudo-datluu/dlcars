@@ -3,9 +3,7 @@
 @extends("layouts.nav-search")
 @section('content')
 <div class="container">
-    @if ($cars)
     <div class="row" id="car-grid">
-        @foreach ($cars as $car)
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
             <div class="card custom-card home-display-card">
                 <div class="card-img-wrapper custom-card-img-wrapper">
@@ -36,16 +34,6 @@
                 </div>
             </div>
         </div>
-        @endforeach
     </div>
-    @else
-    <div class="row">
-        <div class="col-12 py-4">
-            <img src="{{ asset('img/notfound.svg') }}" class="d-block m-auto py-4 w-50" alt="No results" loading="lazy" />
-            <h1 class="text-center text-primary">No cars found</h1>
-            <h1 class="text-center text-primary">Please try another keyword</h1>
-        </div>
-    </div>
-    @endif
 </div>
 @endsection

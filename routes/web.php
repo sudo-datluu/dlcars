@@ -11,9 +11,10 @@ Route::get('/', function () {
 });
 
 Route::get('/home/{carBrandSlug?}/{carTypeSlug?}', [CarController::class, 'home']) -> name('home');
+Route::get('car/{carId}', [CarController::class, 'carDetails']);
 
 Route::group(['prefix' => 'search'], function() {
     Route::get('/cars', [SearchController::class, 'cars']);
-    Route::get('/recent', [SearchController::class, 'recent']);
+    Route::get('/history', [SearchController::class, 'history']);
     Route::post('/save', [SearchController::class, 'saveSearch']);
 });

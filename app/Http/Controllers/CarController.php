@@ -31,6 +31,20 @@ class CarController extends Controller
                 return strtolower(str_replace(' ', '-', $car['type'])) === $carTypeSlug;
             });
         }
+
+        $query = $request->get('query');
+        if (!empty($query)) {
+            $cars = array_filter($cars, function ($car) use ($query) {
+                return stripos($car['search_index'], $query) !== false;
+            });
+            $cars = array_values($cars);
+        }
+
         return view('home', ['cars' => $cars]);
+    }
+
+    function carDetails($carId) {
+        $car = $this->carModel->get($carId);
+        return view('car', ['car' => $car]);
     }
 }

@@ -11,12 +11,15 @@ class SearchController extends Controller
 {
     protected $recentSearches = [];
 
-    public function cars(Request $request) {
-        $query = $request->input('query');
-        $cars = json_decode(File::get(public_path('json/cars.json')), true);
+    public function cars(Request $request, $cars = null) {
+        $query = urldecode($request->get('query'));
+        
+        if (!$cars) {
+            $cars = json_decode(File::get(public_path('json/cars.json')), true);
+        }
         $results = $cars;
 
-        if (!$query) {
+        if (!empty($query)) {
             $results = array_filter($cars, function ($car) use ($query) {
                 return stripos($car['search_index'], $query) !== false;
             });
@@ -27,8 +30,9 @@ class SearchController extends Controller
         return response()->json($results);
     }
 
-    public function recent()
+    public function history(Request $request)
     {
+        // $request->session()->forget('recentSearches');
         return response()->json(session('recentSearches', []));
     }
 
@@ -36,9 +40,15 @@ class SearchController extends Controller
     {
         $searchTerm = $request->input('searchTerm');
 
+        if (!$searchTerm) {
+            return response()->json(['status' => 'error', 'message' => 'Search term is required']);
+        }
         // Save search term to session
         $recentSearches = session('recentSearches', []);
-        array_unshift($recentSearches, $searchTerm);
+        if (!in_array($searchTerm, $recentSearches)) {
+            $recentSearches[] = $searchTerm;
+        }
+        $recentSearches = array_slice($recentSearches, -5);
         session(['recentSearches' => array_unique($recentSearches)]);
 
         return response()->json(['status' => 'success']);

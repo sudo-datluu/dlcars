@@ -36,7 +36,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Navbar brand -->
                         <a class="navbar-brand mt-2 mt-lg-0" href="{{ route('home') }}">
-                            <img src="{{ asset('img/logo.png') }}" height="40" alt="MDB Logo" loading="lazy" />
+                            <img src="{{ asset('img/logo.png') }}" height="40" alt="DLCars Logo" loading="lazy" />
                             <h2 class="text-primary m-0">DLCars</h2>
                         </a>
                         @yield('nav-categories')
