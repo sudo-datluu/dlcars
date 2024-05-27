@@ -9,6 +9,18 @@
 :root {
     --mdb-primary: #E65922 !important;
     --mdb-primary-rgb: 230, 89, 34;
+    --mdb-btn-bg: #E65922 !important;
+    --mdb-btn-box-shadow: 0 4px 9px -4px rgba(230, 89, 34, 0.5);
+    --mdb-btn-hover-bg: #FC583F !important;
+    --mdb-btn-focus-bg: #fc583f !important;
+}
+
+.btn-primary {
+    --mdb-btn-bg: #E65922 !important;
+    --mdb-btn-box-shadow: 0 4px 9px -4px rgba(230, 89, 34, 0.5);
+    --mdb-btn-hover-bg: #FC583F !important;
+    --mdb-btn-focus-bg: #fc583f !important;
+    --mdb-btn-active-bg: #fc583f !important;
 }
 
 #menu-icon {
@@ -28,4 +40,8 @@
         font-size: 15px;
         padding: 10px 10px;
     }
+}
+
+.none-border-card-footer {
+    --mdb-card-footer-border-width: 0px !important;
 }

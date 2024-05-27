@@ -45,11 +45,13 @@ class SearchController extends Controller
         }
         // Save search term to session
         $recentSearches = session('recentSearches', []);
-        if (!in_array($searchTerm, $recentSearches)) {
-            $recentSearches[] = $searchTerm;
-        }
-        $recentSearches = array_slice($recentSearches, -5);
-        session(['recentSearches' => array_unique($recentSearches)]);
+        // if (!in_array($searchTerm, $recentSearches)) {
+        //     $recentSearches[] = $searchTerm;
+        // }
+        $recentSearches[] = array_unshift($recentSearches, $searchTerm);
+        $recentSearches = array_unique($recentSearches);
+        $recentSearches = array_slice($recentSearches, 0, 3);
+        session(['recentSearches' => $recentSearches]);
 
         return response()->json(['status' => 'success']);
     }

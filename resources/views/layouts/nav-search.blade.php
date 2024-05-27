@@ -88,14 +88,14 @@
                         }
                         info.setAttribute("class", "text-center");
                         list.prepend(info);
-                        const recentSearch = history.toReversed();
+                        const recentSearch = history;
                         const historyLength = recentSearch.length;
                         const historyBlock = document.createElement("div");
                         historyBlock.setAttribute("style", "display: flex; flex-direction: column; margin: .3rem; padding: .3rem .5rem;");
                         // Check if there are recent searches
                         historyBlock.innerHTML = history.length ? "Recent Searches" : "No Recent Searches Found";
                         // Limit displayed searched to only last "2"
-                        recentSearch.slice(0, 2).forEach((item) => {
+                        recentSearch.slice(0, 3).forEach((item) => {
                             const recentItem = document.createElement("span");
                             recentItem.setAttribute("style", "display: flex; margin: .2rem; color: rgba(0, 0, 0, .2);");
                             recentItem.innerHTML = item;

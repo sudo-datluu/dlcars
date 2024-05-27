@@ -11,7 +11,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home/{carBrandSlug?}/{carTypeSlug?}', [CarController::class, 'home']) -> name('home');
-Route::get('car/{carId}', [CarController::class, 'carDetails']);
+Route::get('car/{carId}', [CarController::class, 'carDetails']) -> name('car');
 
 Route::group(['prefix' => 'search'], function() {
     Route::get('/cars', [SearchController::class, 'cars']);
