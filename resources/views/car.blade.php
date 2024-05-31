@@ -6,7 +6,7 @@
     <div class="d-flex justify-content-between">
         <h4 class="card-title custom-card-title">{{ $car['name'] }}</h4>
         @if($car['available'])
-        <a href="#" class="btn btn-primary">
+        <a href="#" data-id="{{ $car['id'] }}" class="btn btn-primary btn-rent">
             Rent
         </a>
         @else

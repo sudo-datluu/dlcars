@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\File;
 
 class Car
 {
-    protected $filePath;
+    public $filePath;
 
     public function __construct()
     {

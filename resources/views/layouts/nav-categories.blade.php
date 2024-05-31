@@ -1,5 +1,5 @@
 @section('nav-categories')
-<div id="menu-icon" class="text-primary">&#9776;</div>
+<div id="menu-icon" class="text-menu-style text-primary">&#9776;</div>
 <div class="dlcar-sidenav" id="mySidenav">
     @if(getBrands()->isNotEmpty())
     @foreach(getBrands() as $brand)
@@ -20,4 +20,8 @@
     @endforeach
     @endif
 </div>
+@endsection
+
+@section('nav-categories-script')
+<script type="text/javascript" src="{{ asset('js/nav-categories.js') }}"></script>
 @endsection

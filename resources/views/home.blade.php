@@ -34,7 +34,7 @@
                             </div>
                             <div class="card-footer none-border-card-footer">
                                 @if($car['available'])
-                                <a href="#" class="btn btn-primary">
+                                <a data-id="{{ $car['id'] }}" href="#" class="btn-rent btn btn-primary">
                                     Rent
                                 </a>
                                 @else

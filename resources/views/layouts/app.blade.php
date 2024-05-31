@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{asset('css/home.css')}}" />
     <link rel="stylesheet" href="{{asset('css/custom.css')}}" />
     <link rel="stylesheet" href="{{asset('css/dlcar-sidenav.css')}}" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 
 <body>
@@ -40,9 +41,11 @@
                             <h2 class="text-primary m-0">DLCars</h2>
                         </a>
                         @yield('nav-categories')
+                        <a class="pe-auto" href="{{ route('reservation') }}">
+                            <div class="text-primary">Reservation</div>
+                        </a>
                     </div>
                     <!-- Collapsible wrapper -->
-
                     @yield('nav-search')
                 </div>
                 <!-- Container wrapper -->
@@ -54,6 +57,8 @@
     </main>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/autoComplete.min.js"></script>
 <script type="text/javascript" src="{{ asset('js/mdb.umd.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
@@ -66,4 +71,7 @@
 </script>
 @yield('custom-script')
 @yield('search-script')
+@yield('nav-categories-script')
+@yield('order-script')
+@yield('reservation-script')
 </html>
